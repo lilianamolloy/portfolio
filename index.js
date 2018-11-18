@@ -1,4 +1,5 @@
 const nav = document.querySelector('nav')
+// const div = document.querySelectorAll('.link')
 const link = document.querySelectorAll('a')
 
 
@@ -16,7 +17,7 @@ const link = document.querySelectorAll('a')
 nav.addEventListener('click', function(e) {
     for (let i = 5; i <link.length; i++) {
         if (e.target.innerText === link[i].innerText) {
-            console.log(e.target.style.textDecoration = "line-through")
+            console.log(e.target)
             // console.log(e.target.classList)
         }
     }
