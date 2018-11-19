@@ -205,6 +205,9 @@ nav .socials a {
     position: absolute;
     margin-top: 25%;
     margin-left: 20%;
+}
+
+.portfolio-animation {
     animation-name: portfolio; 
     animation-duration: 4s;    
     animation-fill-mode: forwards;
@@ -316,6 +319,9 @@ nav .socials a {
     text-align: left;
     margin-top: 0;
     margin-bottom: 0;
+}
+
+.contact-animation {
     animation-name: contact;
     animation-duration: 3s;
     animation-fill-mode: forwards;
