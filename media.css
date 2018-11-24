@@ -1,54 +1,13 @@
 /* media queries */
-@media (max-width: 1384px) {
-    .main-banner {
-        margin-left: 13%;        
-    }
-}
 
-@media (max-width: 1347px) {
+@media (max-width: 1380px) {
     .main-banner {
-        margin-left: 11%;        
+        margin-left: auto;
+        margin-right: auto;
     }
-}
-
-@media (max-width: 1320px) {
     .portfolio h2 {
-        margin-left: 8%:
-    }
-
-    @keyframes portfolio {
-        40%   { margin-left: 2%;}
-        100% { margin-left: 8%; z-index: 3;}
-    }
-    .main-banner {
-        margin-left: 9%;
-    }
-}
-
-@media (max-width: 1291px) {
-    .portfolio h2 {
-        margin-left: 5%:
-    }
-
-    @keyframes portfolio {
-        40%   { margin-left: 2%;}
-        100% { margin-left: 5%; z-index: 3;}
-    }
-
-    .main-banner {
-        margin-left: 5%;
-    }
-}
-
-@media (max-width: 1235px) {
-    .portfolio h2 {
-        margin-top: 11.5%;
-    }
-
-    .main-banner {
-        margin-left: 0;
-        width: 100%;
-        height: 70%;
+        margin: auto;
+        margin-top: 155px;
     }
 }
 
@@ -66,18 +25,6 @@
     .portfolio .pink {
         width: 100vw;
     }
-
-    .portfolio h2 {
-        margin-top: 12%;
-        margin-left: 1%;
-    }
-
-    .main-banner {
-        margin-left: auto;
-        margin-right: auto;
-        width: 800px;
-        height: 450px;
-    }
 }
 
 @media (max-width: 1133px) {
@@ -85,9 +32,8 @@
         justify-content: flex-end;
     }
 
-    .portfolio h2 {
-        margin-top: 17%;
-        margin-left: 1%;
+    .main-banner {
+        margin-bottom: 50px;
     }
 
     .green li {
@@ -161,12 +107,6 @@
     }
 }
 
-@media (max-width: 892px) {
-    .main-banner {
-        margin-left: 1%;
-    }
-}
-
 @media (max-width: 855px) { 
     .contact {
         flex-flow: row;
@@ -179,20 +119,6 @@
         margin-bottom: 0;
         margin-right: 0;
         margin: 10px;
-    }
-
-/* turn off animations */
-    .portfolio-animation {
-        animation-name: none;
-    }
-    .portfolio .pink {
-        z-index: -1;
-    }
-    .contact-animation {
-        animation-name: none;
-    }
-    .form h2 {
-        text-align: right;
     }
 }
 
@@ -260,29 +186,15 @@
     }
 }
 
-@media (max-width: 805px) {
+@media (max-width: 800px) {
     .main-banner {
-        width: 90%;
-        height: 60%;
-        margin-left: auto;
-        margin-right: auto;
-    }
-
-    .portfolio h2 {
-        margin-top: 25%;
-    }
-}
-
-@media (max-width: 765px) {
-    .main-banner {
+        background: yellow;
         width: 700px;
         height: 400px;
-        margin-left: auto;
-        margin-right: auto;
-        margin-bottom: 5%;
+        margin-bottom: 70px;
     }
-    .portfolio h2 {
-        margin-top: 30%;
+    .imgbanbtn {
+        top: 180px;
     }
 }
 
@@ -332,11 +244,23 @@
     .main-banner {
         width: 600px;
         height: 350px;
-        margin: 5% auto;
+        margin-bottom: 100px;
     }
-
     .imgbanbtn {
         top: 155px;
+    }
+    /* turn off animations */
+    .portfolio-animation {
+        animation-name: none;
+    }
+    .portfolio .pink {
+        z-index: -1;
+    }
+    .contact-animation {
+        animation-name: none;
+    }
+    .form h2 {
+        text-align: right;
     }
 }
 
@@ -350,16 +274,11 @@
     .main-banner {
         width: 500px;
         height: 300px;
-        margin: 10% auto;
-        margin-top: 0;
+        margin-bottom: 20%;
     }
 
     .imgbanbtn {
         top: 130px;
-    }
-
-    .portfolio h2 {
-        margin-top: 40%;
     }
 }
 
@@ -374,31 +293,41 @@
 }
 
 @media (max-width: 500px) {
+    .portfolio h2 {
+        font-size: 55px;
+    }
     .main-banner {
         width: 400px;
         height: 250px;
-        margin: 20% auto;
-        margin-top: 0;
     }
 
     .imgbanbtn {
-        top: 115px;
-        width: 20px;
-        height:20px;
-    }
-
-    .portfolio h2 {
-        margin-top: 50%;
-        font-size: 55px;
+        top: 105px;
     }
 }
 
 @media (max-width: 426px) { 
     .about .white {
-        height: 350px;
+        height: 400px;
+    }
+    .skills img {
+        margin: 7px;
     }
 }
 
+@media (max-width: 400px) {
+    .portfolio h2 {
+        font-size: 45px;
+    }
+    .main-banner {
+        width: 320px;
+        height: 200px;
+    }
+
+    .imgbanbtn {
+        top: 80px;
+    }
+}
 
 /* height:  */
 
@@ -411,5 +340,11 @@
 @media (max-height: 639px) {
     .resume h2 {
         margin-top: 2%;
+    }
+}
+
+@media (max-height: 629px) {
+    .about .green  {
+        padding-top: 150px;
     }
 }
