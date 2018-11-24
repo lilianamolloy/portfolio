@@ -38,7 +38,7 @@ h1 {
 
 h2 {
     font-family: 'Montserrat', sans-serif;
-    font-size: 75px;
+    font-size: 65px;
     text-transform: uppercase;
 }
 
@@ -205,7 +205,7 @@ nav .socials a {
 
 .portfolio h2 {
     position: absolute;
-    margin-top: 25%;
+    margin-top: 19%;
     margin-left: 10%;
 }
 
@@ -243,12 +243,13 @@ nav .socials a {
 
 .main-banner {
     margin: 0 auto;
-    margin-top: 130px;
-    width: 70%;
+    margin-top: 19%;
+    width: 800px;
     height: 450px;
     background: #F6DBCD;
     overflow: hidden;
     position: relative;
+    margin-left: 15%;
 }
 
 .main-banner .imgban {
@@ -259,8 +260,7 @@ nav .socials a {
     transition: all ease-in-out 500ms;
     -webkit-transition: all ease-in-out 500ms;
     -moz-transition: all ease-in-out 500ms;
-    -o-transition: all ease-in-out 500ms;
-    
+    -o-transition: all ease-in-out 500ms; 
 }
 
 .main-banner #imgban3 {
