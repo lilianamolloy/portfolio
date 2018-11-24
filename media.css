@@ -328,6 +328,16 @@
     }
 }
 
+@media (max-width: 375px) { 
+    .skills img {
+        margin: 5px;
+    }
+
+    .resume h2 {
+        font-size: 55px;
+    }
+}
+
 /* height:  */
 
 @media (max-height: 686px) {
