@@ -69,21 +69,62 @@ document.querySelector('#main-banner').addEventListener('mouseleave', function()
     }, bannerTimer)
 })
 
+let leftCounter = 0
 document.querySelector('#imgbanbtn-prev').addEventListener('click', function() {
-    if (bannerStatus === 1) {
-        bannerStatus = 2
+    if(leftCounter === 0) {
+        if (bannerStatus === 1) {
+            bannerStatus = 2
+        }
+        else if (bannerStatus === 2) {
+            bannerStatus = 3
+        }
+        else if (bannerStatus === 3) {
+            bannerStatus = 1
+        }
+        bannerLoopLeft()
+        leftCounter += 1
+    } else {
+        bannerLoopLeft()
     }
-    else if (bannerStatus === 2) {
-        bannerStatus = 3
-    }
-    else if (bannerStatus === 3) {
-        bannerStatus = 1
-    }
-    bannerLoop()
+    rightCounter = 0
+    // if (bannerStatus === 1) {
+    //     bannerStatus = 2
+    // }
+    // else if (bannerStatus === 2) {
+    //     bannerStatus = 3
+    // }
+    // else if (bannerStatus === 3) {
+    //     bannerStatus = 1
+    // }
+    // bannerLoop()
+    
 })
 
+let initialCounter = 1
+let rightCounter = 0
 document.querySelector('#imgbanbtn-nxt').addEventListener('click', function() {
-    bannerLoop()
+    if (initialCounter === 1) {
+        bannerLoop()  
+        initialCounter += 1  
+    }
+    else if(rightCounter === 0) {
+        if (bannerStatus === 1) {
+            bannerStatus = 3
+        }
+        else if (bannerStatus === 2) {
+            bannerStatus = 1
+        }
+        else if (bannerStatus === 3) {
+            bannerStatus = 2
+        }
+        bannerLoop()
+        rightCounter += 1
+    } 
+    else {
+        bannerLoop()
+    }
+    leftCounter = 0
+    // bannerLoop()
 })
 
 function bannerLoop() {
@@ -131,5 +172,53 @@ function bannerLoop() {
             document.querySelector('#imgban1').style.opacity = '1'
         }, 1000)
         bannerStatus = 1
+    }
+}
+
+function bannerLoopLeft() {
+    if (bannerStatus === 1) {
+        document.querySelector('#imgban3').style.opacity = '0'
+        setTimeout(function(){
+            document.querySelector('#imgban1').style.right = '0px'
+            document.querySelector('#imgban1').style.zIndex = '-100%'
+            document.querySelector('#imgban2').style.right = '-1000px'
+            document.querySelector('#imgban2').style.zIndex = '1500'
+            document.querySelector('#imgban3').style.right = '200%'
+            document.querySelector('#imgban3').style.zIndex = '500'
+        }, 500)
+        setTimeout(function(){
+            document.querySelector('#imgban3').style.opacity = '1'
+        }, 1000)
+        bannerStatus = 3
+    }
+    else if (bannerStatus === 2) {
+        document.querySelector('#imgban1').style.opacity = '0'
+        setTimeout(function(){
+            document.querySelector('#imgban2').style.right = '0px'
+            document.querySelector('#imgban2').style.zIndex = '1000'
+            document.querySelector('#imgban3').style.right = '-100%'
+            document.querySelector('#imgban3').style.zIndex = '1500'
+            document.querySelector('#imgban1').style.right = '200%'
+            document.querySelector('#imgban1').style.zIndex = '500'
+        }, 500)
+        setTimeout(function(){
+            document.querySelector('#imgban1').style.opacity = '1'
+        }, 1000)
+        bannerStatus = 1
+    }
+    else if (bannerStatus === 3) {
+        document.querySelector('#imgban2').style.opacity = '0'
+        setTimeout(function(){
+            document.querySelector('#imgban3').style.right = '0px'
+            document.querySelector('#imgban3').style.zIndex = '1000'
+            document.querySelector('#imgban1').style.right = '-100%'
+            document.querySelector('#imgban1').style.zIndex = '1500'
+            document.querySelector('#imgban2').style.right = '200%'
+            document.querySelector('#imgban2').style.zIndex = '500'
+        }, 500)
+        setTimeout(function(){
+            document.querySelector('#imgban2').style.opacity = '1'
+        }, 1000)
+        bannerStatus = 2
     }
 }
